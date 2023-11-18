@@ -1,17 +1,20 @@
 import data
 
 
-class WorkWithData: #Class working with data
+class Work_With_Data:       #Class working with data
 
-    def SaveData(): #Function that saves new data to existing dictionary in "data.py" script
+    def Save_Data():        #Function that saves new data to existing dictionary in "data.py" script
         new_dict = data.Text_fields
-        with open("data.py", "w") as f:  #Opens "data.py" for writing as "f" allowing the code to rewrite the file with the new dictionary
-            f.write("Text_fields = " + str(new_dict)) #Rewrites the file
+        new_img = data.Image_src
+        with open("data.py", "w") as f:         #Opens "data.py" for writing as "f" allowing the code to rewrite the file with the new dictionary
+            f.writelines("Text_fields = " + str(new_dict) +"\n")        #Rewrites the "Text_fields" dictionary in "data.py" script
+            f.writelines("Image_src = "+ str(new_img) + "\n")       #Rewrites the "Image_src" dictionary in "data.py" script
     
-    def RewriteData(key, new_val): #Function thjat rewrites existing data in "Text_fields" Dictionary in "Data.py" script
-        if data.Text_fields[key] == new_val: #Checks if the old value of a key is equal to new one. If does, then it won´t rewrite the key value
-            return
-        else:
-            data.Text_fields[key] = new_val #rewrites the value of a key
+    def Clear_Data():   #Clears all data in every dictionary
+        data.Text_fields = {}
+        data.Image_src = {}
 
-
+    def Create_image_source(key, value):        #Function that creates image source key in "Image_src" dictionary in "data.py" script
+        if key not in data.Image_src:       #Checks if key exists 
+            data.Image_src[key] = value
+    
