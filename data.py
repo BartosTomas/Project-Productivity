@@ -1,1 +1,1 @@
-Text_fields = {}
+Text_fields = {'Field 1': None, 'Field 2': None, 'Field 3': None, 'Field 4': None, 'Field 5': None, 'Field 6': None, 'Field 7': None, 'Field 8': None}
