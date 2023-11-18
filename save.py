@@ -13,8 +13,3 @@ class Work_With_Data:       #Class working with data
     def Clear_Data():   #Clears all data in every dictionary
         data.Text_fields = {}
         data.Image_src = {}
-
-    def Create_image_source(key, value):        #Function that creates image source key in "Image_src" dictionary in "data.py" script
-        if key not in data.Image_src:       #Checks if key exists 
-            data.Image_src[key] = value
-    
