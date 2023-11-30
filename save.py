@@ -13,3 +13,10 @@ class Work_With_Data:       #Class working with data
     def Clear_Data():   #Clears all data in every dictionary
         data.Text_fields = {}
         data.Image_src = {}
+
+if __name__ == "__main__":
+    import Text_Fields_Data_Processing as tw
+    tw.Create_Text_Field("Name", "Ondra")
+    Work_With_Data.Save_Data()
+    import API
+    API.API.Create_file()
