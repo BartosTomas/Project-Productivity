@@ -15,9 +15,9 @@ Pracuje s odkazy na obrázky a ukládá je do dictionary ve scriptu "data.py".
 ## Text_field_data_processing
 Pracuje s textovými poli, ukládá je do dictionary ve scriptu "data.py".
 
-##Save
+## Save
 Ukládá změny v dictionaries ve scriptu "data.py".
 Následně se propojí s Google Cloud úložištěm, kam uloží provedené změny.
 
-##API
+## API
 Modul pro práci s Google Cloud API.
