@@ -1,2 +1,2 @@
-Text_fields = {}
+Text_fields = {"text" : "text"}
 Image_src = {}
