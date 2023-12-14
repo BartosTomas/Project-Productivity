@@ -1,4 +1,3 @@
-# Class Page
 #                 __    ________
 #                / _)  / Rooooo \
 #        .-^^^-/ /     \ aaaar! /
