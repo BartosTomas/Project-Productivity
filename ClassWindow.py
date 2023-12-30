@@ -2,8 +2,18 @@ import customtkinter
 import tkinter 
 import tkinterDnD
 import ClassPage
+import keyboard
 
-
+#                      /^--^\     /^--^\     /^--^\
+#                      \____/     \____/     \____/
+#                     /      \   /      \   /      \
+#KAT                 |        | |        | |        |
+#                     \__  __/   \__  __/   \__  __/
+#|^|^|^|^|^|^|^|^|^|^|^|^\ \^|^|^|^/ /^|^|^|^|^\ \^|^|^|^|^|^|^|^|^|^|^|^|
+#| | | | | | | | | | | | |\ \| | |/ /| | | | | | \ \ | | | | | | | | | | |
+#########################/ /######\ \###########/ /#######################
+#| | | | | | | | | | | | \/| | | | \/| | | | | |\/ | | | | | | | | | | | |
+#|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 class Window:
     def __init__(self):
         customtkinter.set_ctk_parent_class(tkinterDnD.Tk)
@@ -21,10 +31,28 @@ class Window:
         window.rowconfigure(1, weight=3)
         
         ClassPage.Page(window)
+        self.text_field = ClassPage.Page(window).textfield
+
+        keyboard.add_hotkey("ctrl + n", self.new_page)
+
         window.mainloop()
+
+    def new_page(self):
+        #button1 = 
+        #button1.bind("<Button-1>",self.new_widget)
+        self.text_field.insert(text="NewPage", index="0.0")
+
+    def new_widget(self):
+        pass
 
 if __name__ == "__main__":
     Window()
+
+
+
+
+
+
 
 
 

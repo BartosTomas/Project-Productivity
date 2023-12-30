@@ -7,6 +7,7 @@
 import customtkinter
 import tkinter 
 import tkinterDnD
+import keyboard
 
 class Page(customtkinter.CTk):
     def __init__(self, window):
@@ -19,9 +20,9 @@ class Page(customtkinter.CTk):
         headding.grid(column=1, row=0, sticky="EW")
         headding.insert("0.0", "Heading")
 
-        textfield = customtkinter.CTkTextbox(master= self.window, font=("Helvetica", 24))
-        textfield. grid(column= 1, row=1, sticky="SNEW")
-        textfield.insert("0.0", "Text field")
+        self.textfield = customtkinter.CTkTextbox(master= self.window, font=("Helvetica", 24))
+        self.textfield. grid(column= 1, row=1, sticky="SNEW")
+        self.textfield.insert("0.0", "Text field")
 
 
 
