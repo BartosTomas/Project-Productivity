@@ -1,2 +1,3 @@
-Text_fields = {"text" : "text"}
+Text_fields = {}
 Image_src = {}
+Users = {}
